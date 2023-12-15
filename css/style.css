@@ -3,7 +3,8 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     /* background-image: url(img/Boolzapp_Background.png); */
-    background-color: aquamarine;
+    background-color: rgb(141, 253, 216);
+    font-family: 'Kalnia', serif;
 }
 
 /* Macrosezioni  */
@@ -17,7 +18,6 @@ body {
 .boolzapp {
     width: 80%;
     height: 90vh;
-    background-color: blue;
     margin: auto;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -41,6 +41,7 @@ body, #app, .boolzapp {
 .top-bar-left, .top-bar-right {
     height: 80px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: aquamarine;
 }
@@ -51,14 +52,55 @@ body, #app, .boolzapp {
     padding-left: 10px;
     padding-right: 10px;
 }
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.img-avatar {
+    width: 50px;
+    border-radius: 50%;
+    padding-right: 15px;
+}
+
 
 .alert {
     background-color: lightblue;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bell {
+    background-color: white;
+    border-radius: 50%;
+}
+.bell i {
+    font-size: 22px;
+    padding: 14px;
+    color: lightblue;
+}
+.notifiche {
+    padding-left: 12px;
+}
+
+.attiva-notifiche {
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+    text-decoration: underline;
 }
 
 #search {
     min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-msg {
+    flex-basis: 60%;
+    height: 30px;
+    border-radius: 5px;
 }
 
 /* Sfondo bianco  */
@@ -70,16 +112,52 @@ body, #app, .boolzapp {
     min-height: calc(100% - 180px);
 }
 
+.personal-chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-msg {
+    flex-basis: 70%;
+}
+.msg-subtitle, .hour {
+    font-size: 12px;
+    color: gray;
+}
+.hour {
+    height: 100%;
+}
+
 /* Parte Destra e suoi componenti interni  */
 
 .message-active {
     width: 60%;
-    background-color: red;
 }
 
 .new-chat {
-    min-height: calc(100% - 80px);
+    height: calc(100% - 80px);
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
 }
+.chat-others, .my-chat {
+    flex-basis: 45%;
+}
+
+/* Classe che andrà assegnata al "contenitore dei messaggi che verranno generati" */
+
+.panel {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 10px;
+}
+
 .new-message {
     height: 60px;
     display: flex;
@@ -87,9 +165,10 @@ body, #app, .boolzapp {
     justify-content: space-between;
     background-color: aquamarine;
 }
-.new-message i {
+.new-message i, .icons i {
     font-size: 22px;
     color: gray;
+    padding: 10px;
 }
 textarea {
     height: 50px;
