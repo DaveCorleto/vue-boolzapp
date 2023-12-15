@@ -62,15 +62,14 @@
                         <input type="text" id="search-msg" placeholder=" &#128269  Cerca o inizia una nuova chat">
                     </div>
                     <div class="chat-list">
-                        <!-- Qui ci deve essere un div generato per ogni utente con  -->
-                        <!-- cui ho interagito. Div di esempio statico (da cancellare) -->
-                        <div class="personal-chat">
+   
+                        <div class="personal-chat" v-for="(contact, i) in contacts" :key="i">                         
                             <div class="avatar">
-                                <img class="img-avatar" src="img/3.webp" alt="3">
+                                <img class="img-avatar" :src="contacts[i].avatar" alt="image">
                             </div>
                             <div class="content-msg">
-                                <div class="name">Nome</div>
-                                <div class="msg-subtitle">Testo del Messaggio</div>
+                                <div class="name">{{contacts[i].name}}</div>
+                                <!-- <div class="msg-subtitle" v-for="(msg, j) in contact.messages" :key="j">{{ contact.messages[contact.messages.length - 1].message}} -->
                             </div>
                             <div class="hour">12:00</div>
                         </div>
@@ -103,7 +102,7 @@
                             <div class="panel">Come butta?</div>
                         </div>
                         <div class="my-chat">
-                            <div class="panel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim sequi perspiciatis accusamus totam illum dolor voluptas cumque incidunt laboriosam perferendis facere earum pariatur rem ratione, ut odio provident sit.?</div>
+                            <div class="panel personal-msg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim sequi perspiciatis accusamus totam illum dolor voluptas cumque incidunt laboriosam perferendis facere earum pariatur rem ratione, ut odio provident sit.?</div>
                             <div class="panel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim sequi perspiciatis accusamus totam illum dolor voluptas cumque incidunt laboriosam perferendis facere earum pariatur rem ratione, ut odio provident sit.?</div>
                             <div class="panel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim sequi perspiciatis accusamus totam illum dolor voluptas cumque incidunt laboriosam perferendis facere earum pariatur rem ratione, ut odio provident sit.?</div>
                             <div class="panel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim sequi perspiciatis accusamus totam illum dolor voluptas cumque incidunt laboriosam perferendis facere earum pariatur rem ratione, ut odio provident sit.?</div>

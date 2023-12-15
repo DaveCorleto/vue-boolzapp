@@ -35,7 +35,6 @@ body, #app, .boolzapp {
 
 .message-list {
     width: 40%;
-    background-color: red;
 }
 
 .top-bar-left, .top-bar-right {
@@ -109,7 +108,10 @@ body, #app, .boolzapp {
 }
 
 .chat-list {
-    min-height: calc(100% - 180px);
+    height: calc(100% - 180px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin: 0 auto;
 }
 
 .personal-chat {
@@ -156,6 +158,9 @@ body, #app, .boolzapp {
     box-sizing: border-box;
     background-color: white;
     padding: 10px;
+}
+.personal-msg {
+    background-color: lightgreen;
 }
 
 .new-message {

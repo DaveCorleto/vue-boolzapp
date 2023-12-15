@@ -175,3 +175,6 @@ createApp({
   },
 //   template: '<div>{{contacts[0].name}}</div>'
 }).mount("#app");
+
+// Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
+
