@@ -1,7 +1,103 @@
 body {
     margin: 0 auto;
-    box-sizing: border-box;
     padding: 0;
     font-family: 'Roboto', sans-serif;
- 
+    /* background-image: url(img/Boolzapp_Background.png); */
+    background-color: aquamarine;
 }
+
+/* Macrosezioni  */
+
+#app {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    
+}
+.boolzapp {
+    width: 80%;
+    height: 90vh;
+    background-color: blue;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    
+}
+
+body, #app, .boolzapp {
+    box-sizing: border-box;
+}
+
+/* Parte sinistra/destra dell'app  */
+
+/* Parte sinistra (e suoi componenti interni ) */
+
+.message-list {
+    width: 40%;
+    background-color: red;
+}
+
+.top-bar-left, .top-bar-right {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+/* Spaziatura con padding laterali in comuni per tutti gli elementi interni  */
+
+.top-bar-left, .top-bar-right, .alert, #search, .chat-list, .new-message {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alert {
+    background-color: lightblue;
+    height: 100px;
+}
+
+#search {
+    min-height: 60px;
+}
+
+/* Sfondo bianco  */
+#search, .chat-list {
+    background-color: white;
+}
+
+.chat-list {
+    min-height: calc(100% - 180px);
+}
+
+/* Parte Destra e suoi componenti interni  */
+
+.message-active {
+    width: 60%;
+    background-color: red;
+}
+
+.new-chat {
+    min-height: calc(100% - 80px);
+}
+.new-message {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+.new-message i {
+    font-size: 22px;
+    color: gray;
+}
+textarea {
+    height: 50px;
+}
+
+#type-new-message {
+    height: 40px;
+    flex-basis: 80%;
+    border-radius: 5px;
+}
+
