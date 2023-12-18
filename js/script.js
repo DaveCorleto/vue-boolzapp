@@ -1,180 +1,197 @@
 
 
-    const { createApp } = Vue;
+const { createApp } = Vue;
 
 createApp({
-  data() {
-    return {
-        contacts: [
-            {
-                name: 'Michele',
-                avatar: 'img/1.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Hai portato a spasso il cane?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Ricordati di stendere i panni',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
-                        status: 'received'
-                    }
-                ],
-            },
-            {
-                name: 'Fabio',
-                avatar: 'img/2.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '20/03/2020 16:30:00',
-                        message: 'Ciao come stai?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '20/03/2020 16:30:55',
-                        message: 'Bene grazie! Stasera ci vediamo?',
-                        status: 'received'
-                    },
-                    {
-                        date: '20/03/2020 16:35:00',
-                        message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                        status: 'sent'
-                    }
-                ],
-            },
-            {
-                name: 'Samuele',
-                avatar: 'img/3.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '28/03/2020 10:10:40',
-                        message: 'La Marianna va in campagna',
-                        status: 'received'
-                    },
-                    {
-                        date: '28/03/2020 10:20:10',
-                        message: 'Sicuro di non aver sbagliato chat?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '28/03/2020 16:15:22',
-                        message: 'Ah scusa!',
-                        status: 'received'
-                    }
-                ],
-            },
-            {
-                name: 'Alessandro B.',
-                avatar: 'img/4.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
-                    }
-                ],
-            },
-            {
-                name: 'Alessandro L.',
-                avatar: 'img/5.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Ricordati di chiamare la nonna',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Va bene, stasera la sento',
-                        status: 'received'
-                    }
-                ],
-            },
-            {
-                name: 'Claudia',
-                avatar: 'img/6.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Ciao Claudia, hai novità?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Non ancora',
-                        status: 'received'
-                    },
-                    {
-                        date: '10/01/2020 15:51:00',
-                        message: 'Nessuna nuova, buona nuova',
-                        status: 'sent'
-                    }
-                ],
-            },
-            {
-                name: 'Federico',
-                avatar: 'img/7.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Fai gli auguri a Martina che è il suo compleanno!',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Grazie per avermelo ricordato, le scrivo subito!',
-                        status: 'received'
-                    }
-                ],
-            },
-            {
-                name: 'Davide',
-                avatar: 'img/8.webp',
-                visible: true,
-                messages: [
-                    {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Ciao, andiamo a mangiare la pizza stasera?',
-                        status: 'received'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:51:00',
-                        message: 'OK!!',
-                        status: 'received'
-                    }
-                ],
+    data() {
+        return {
+            contacts: [
+                {
+                    name: 'Michele',
+                    avatar: 'img/1.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Hai portato a spasso il cane?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Ricordati di stendere i panni',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15:22',
+                            message: 'Tutto fatto!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Fabio',
+                    avatar: 'img/2.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '20/03/2020 16:30:00',
+                            message: 'Ciao come stai?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '20/03/2020 16:30:55',
+                            message: 'Bene grazie! Stasera ci vediamo?',
+                            status: 'received'
+                        },
+                        {
+                            date: '20/03/2020 16:35:00',
+                            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                            status: 'sent'
+                        }
+                    ],
+                },
+                {
+                    name: 'Samuele',
+                    avatar: 'img/3.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'La Marianna va in campagna',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'Sicuro di non aver sbagliato chat?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Ah scusa!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Alessandro B.',
+                    avatar: 'img/4.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Lo sai che ha aperto una nuova pizzeria?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Si, ma preferirei andare al cinema',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Alessandro L.',
+                    avatar: 'img/5.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ricordati di chiamare la nonna',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Va bene, stasera la sento',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Claudia',
+                    avatar: 'img/6.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ciao Claudia, hai novità?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Non ancora',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'Nessuna nuova, buona nuova',
+                            status: 'sent'
+                        }
+                    ],
+                },
+                {
+                    name: 'Federico',
+                    avatar: 'img/7.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Davide',
+                    avatar: 'img/8.webp',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ciao, andiamo a mangiare la pizza stasera?',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'OK!!',
+                            status: 'received'
+                        }
+                    ],
+                }
+            ],
+        };
+    },
+    methods: {
+        getLastMessage(contact) {
+            // se c'è almeno un messaggio...
+            if (contact.messages.length > 0) {
+                // Inizializzazione di lastMessages
+                if (!this.lastMessages[contact.name]) {
+                    this.lastMessages[contact.name] = contact.messages[contact.messages.length - 1].message;
+                }
+                // La funzione restituisce quindi il messaggio memorizzato nell'oggetto lastMessages
+                return this.lastMessages[contact.name];
+
             }
-        ]
-    };
-  },
-  mounted() {
-    console.log(this.contacts); // Accedo ai dati usando this.contacts
-  },
-//   template: '<div>{{contacts[0].name}}</div>'
+            // Se il contatto non ha messaggi, la funzione restituisce una stringa vuota
+            return '';
+
+        },
+    },
+ 
+    mounted() {
+        console.log(this.contacts); // Accedo ai dati usando this.contacts
+    },
 }).mount("#app");
 
-// Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
+
 

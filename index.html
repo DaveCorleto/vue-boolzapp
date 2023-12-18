@@ -69,8 +69,8 @@
                             </div>
                             <div class="content-msg">
                                 <div class="name">{{contacts[i].name}}</div>
-                                <!-- <div class="msg-subtitle" v-for="(msg, j) in contact.messages" :key="j">{{ contact.messages[contact.messages.length - 1].message}} -->
-                            </div>
+                                <div class="msg-subtitle" v-for="(msg, j) in contact.messages" :key="j">{{ getLastMessage(contact) }}
+                            </div> 
                             <div class="hour">12:00</div>
                         </div>
                     </div>

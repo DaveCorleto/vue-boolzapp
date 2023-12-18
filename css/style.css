@@ -118,6 +118,10 @@ body, #app, .boolzapp {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 10px;
+}
+.personal-chat:hover {
+    background-color: lightgreen;
 }
 
 .content-msg {
