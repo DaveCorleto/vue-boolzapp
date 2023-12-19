@@ -119,6 +119,7 @@ body, #app, .boolzapp {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 10px;
+    cursor: pointer;
 }
 .personal-chat:hover {
     background-color: lightgreen;
@@ -133,6 +134,10 @@ body, #app, .boolzapp {
 }
 .hour {
     height: 100%;
+}
+
+.active-chat {
+    background-color: lightgreen;
 }
 
 /* Parte Destra e suoi componenti interni  */

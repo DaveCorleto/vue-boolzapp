@@ -5,6 +5,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            activeIndex: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -172,20 +173,16 @@ createApp({
     },
     methods: {
         getLastMessage(contact) {
-            // se c'è almeno un messaggio...
             if (contact.messages.length > 0) {
-                // Inizializzazione di lastMessages
-                if (!this.lastMessages[contact.name]) {
-                    this.lastMessages[contact.name] = contact.messages[contact.messages.length - 1].message;
-                }
-                // La funzione restituisce quindi il messaggio memorizzato nell'oggetto lastMessages
-                return this.lastMessages[contact.name];
-
+                return contact.messages[contact.messages.length - 1].message;
             }
-            // Se il contatto non ha messaggi, la funzione restituisce una stringa vuota
             return '';
-
         },
+        addClassActive: function(index) {
+            // Cambia l'indice attivo al click
+            this.activeIndex = index;
+
+
     },
  
     mounted() {
