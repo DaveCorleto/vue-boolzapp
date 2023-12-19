@@ -63,7 +63,7 @@
                     </div>
                     <div class="chat-list">
    
-                        <div class="personal-chat" v-for="(contact, i) in contacts" :key="i" @click="addClassActive(i)" :class="{ 'active-chat': contact.isActive }">
+                        <div class="personal-chat" v-for="(contact, i) in contacts" :key="i" @click="SetActiveIndex(i)" :class="{ 'active-chat': i === activeIndex }">
                             <div class="avatar">
                                 <img class="img-avatar" :src="contacts[i].avatar" alt="image">
                             </div>

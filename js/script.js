@@ -179,15 +179,8 @@ createApp({
             return '';
         },
 
-        addClassActive: function(index) {
-            // Rimuovi la classe active-chat da tutti gli elementi .personal-chat
-            const personalChats = document.querySelectorAll('.personal-chat');
-            personalChats.forEach(element => {
-                element.classList.remove('active-chat');
-            });
-        
-            // Aggiungi la classe active-chat solo al contatto cliccato
-            this.$set(this.contacts[index], 'isActive', true);
+        SetActiveIndex: function(index) {
+            this.activeIndex = index;
         },
 
  
