@@ -178,17 +178,23 @@ createApp({
             }
             return '';
         },
+
         addClassActive: function(index) {
-            // Cambia l'indice attivo al click
-            this.activeIndex = index;
+            // Rimuovi la classe active-chat da tutti gli elementi .personal-chat
+            const personalChats = document.querySelectorAll('.personal-chat');
+            personalChats.forEach(element => {
+                element.classList.remove('active-chat');
+            });
+        
+            // Aggiungi la classe active-chat solo al contatto cliccato
+            this.$set(this.contacts[index], 'isActive', true);
+        },
 
-
-    },
  
     mounted() {
-        console.log(this.contacts); // Accedo ai dati usando this.contacts
+        console.log(this.contacts);
     },
-}).mount("#app");
+ }}).mount("#app");
 
 
 
